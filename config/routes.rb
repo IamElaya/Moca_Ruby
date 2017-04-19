@@ -1,18 +1,19 @@
 RottenMangoes::Application.routes.draw do
 
+  get "body_shops/hello"
   # get "sessions/new"
   # get "sessions/create"
   # get "users/new"
   # get "users/create"
-  resources :movies do
-    resources :reviews, only: [:new, :create]
-  end
+  # resources :movies do
+  #   resources :reviews, only: [:new, :create]
+  # end
   namespace :admin do
     resources :users
   end
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
-  root to: 'movies#index'
+  root to: 'body_shops#index'
   # get "movies/index"
   # get "movies/show"
   # get "movies/new"

@@ -11,40 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160201232016) do
+ActiveRecord::Schema.define(version: 20170412225436) do
 
-  create_table "movies", force: true do |t|
-    t.string   "title"
-    t.string   "director"
-    t.integer  "runtime_in_minutes"
-    t.text     "description"
-    t.string   "poster_image_url"
-    t.string   "poster"
-    t.datetime "release_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "body_shops", force: true do |t|
+    t.string  "title"
+    t.string  "email"
+    t.string  "owner_email"
+    t.integer "phone_number"
+    t.string  "address"
+    t.text    "about_us"
+    t.string  "hours"
+    t.string  "specialty"
+    t.string  "poster"
   end
-
-  create_table "reviews", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "movie_id"
-    t.text     "text"
-    t.integer  "rating_out_of_ten"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "reviews", ["movie_id"], name: "index_reviews_on_movie_id"
-  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
 
   create_table "users", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
     t.string   "email"
     t.string   "password_digest"
     t.boolean  "admin",           default: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "firstname"
-    t.string   "lastname"
   end
 
 end
