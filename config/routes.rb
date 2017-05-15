@@ -1,6 +1,8 @@
 RottenMangoes::Application.routes.draw do
 
-  get "body_shops/hello"
+  get "body_shops/blog"
+  get "body_shops/partner"
+  get "body_shops/about_us"
   # get "sessions/new"
   # get "sessions/create"
   # get "users/new"
