@@ -148,7 +148,6 @@ DEPENDENCIES
   puma
   rails (= 4.0.0)
   rails_12factor
-  rmagick
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
